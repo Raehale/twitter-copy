@@ -13,18 +13,63 @@
 
 <body> 
 	<header>
-		<h1>Twimba</h1>
+		<h1>Twitter Sux</h1>
 	</header>
+
 	<main>
 		<div class="tweet-input-area">
 			<img src="images/scrimbalogo.png" class="profile-pic">
 			<textarea placeholder="What's happening?" id="tweet-input"></textarea>
 		</div>
-		<button id="tweet-btn" class="tweet-button">Tweet</button>
+		<button id="tweet-btn" class="tweet-button btn">Tweet</button>
 		<div class="feed" id="feed">
 			<!-- Tweets here!! -->
 		</div>
 	</main>
+
+	<modal class="modal-logins modal-login" id="login-modal">
+		<div class="modal-header" id="login-modal-header">
+			<button class="modal-close-btn" id="modal-close-btn">X</button>
+			<h3 id="modal-title">Login</h3>
+		</div>
+
+		<div class="modal-inner">
+			<form class="modal-form">
+				<label for="username-input" class="label">Username</label>
+				<input type="text" placeholder="Username" id="username-input" class="input" />
+
+				<label for="password-input" class="label">Password</label>
+				<input type="password" placeholder="Password" id="password-input" class="input" />
+
+				<button type="submit" id="login-btn" class="btn submit-btn">Log In</button>
+			</form>
+			<button class="sign-up-modal-btn btn" id="sign-up-modal-btn">Sign Up</button>
+		</div>
+	</modal>
+
+	<modal class="modal-logins modal-sign-up" id="sign-up-modal">
+		<div class="modal-header" id="login-modal-header">
+			<button class="modal-close-btn" id="modal-close-btn">X</button>
+			<h3 id="modal-title">Sign Up</h3>
+		</div>
+
+		<div class="modal-inner">
+			<form class="modal-form">
+				<label for="username-input" class="label">Username</label>
+				<input type="text" placeholder="Username" id="username-input" class="input" />
+
+				<label for="password-input" class="label">Password</label>
+				<input type="password" placeholder="Password" id="password-input" class="input" />
+
+				<label for="profile-pic-input" class="label">Add Your Profile Pic</label>
+				<input type="file" id="profile-pic-input" accept="image/*" />
+
+				<button type="submit" id="sign-up-btn" class="btn submit-btn">Sign Up</button>
+			</form>
+			<button class="login-modal-btn btn" id="login-modal-btn">Log In</button>
+		</div>
+	</modal>
+
 	<script src="index.js" type="module"></script>
 </body>
 

@@ -1,24 +1,29 @@
 html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #9F86C0;
+
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
 }
 
 /* typography and icons */
 
 h1 {
-    color: #0F8CDF;
-    margin-bottom: 10px;
+    color: #231942;
+
     font-size: 20px;
+
+    margin-bottom: 10px;
 }
 
 i {
     font-size: 15px;
+
     cursor: pointer;
 }
 
 .fa-solid {
-    color: #999;
+    color: #231942;
 }
 
 .liked {
@@ -26,13 +31,14 @@ i {
 }
 
 .retweeted {
-  color: limegreen;
+    color: limegreen;
 }
 
 /* layout */
 
 main, header {
     width: 290px;
+
     margin: 0 auto;
 }
 
@@ -43,6 +49,7 @@ header {
 .tweet-input-area {
     display: flex;
     align-items: flex-start;
+
     gap: 10px;
 }
 
@@ -53,37 +60,61 @@ header {
 }
 
 textarea {
-    border: none;
+    background-color: #9F86C0;
     resize: none;
+
     padding: 10px;
+    border: 1px solid #5E548E;
     margin: 0 0 20px 0;
+
     height: 60px;
     width: 100%;
+
     font-size: 20px;
     line-height: 30px;
 }
 
+textarea::placeholder {
+    color: #5E548E;
+}
+
 .reply-textarea {
     font-size: 16px;
-    border: 1px solid #ddd;
+
+    height: 120px;
+
+    border: 1px solid #5E548E;
     border-radius: 20px;
     margin-top: 5%;
 }
 
-.tweet-button {
-    background-color: #1DA1F2;
-    border: none;
+.btn {
+    background-color: #231942;
     color: white;
-    padding: 10px 19px;
-    border-radius: 20px;
-    width: 100%; 
-    cursor: pointer;
-    font-size: 20px;
+
     font-weight: 600;
+
+    border: none;
+    border-radius: 20px;
+    padding: 10px 19px;
+
+    cursor: pointer;
+}
+
+.tweet-button {
+    width: 100%; 
+
+    font-size: 20px;
+}
+
+.btn:hover {
+    background-color: white;
+    color: #231942;
 }
 
 .reply-button {
     position: absolute;
+
     right: 5px;
     top: 26px;
 
@@ -101,9 +132,11 @@ textarea {
 /* tweet */
 
 .tweet {
-    border-top: 1px solid lightgray;
-    padding: 20px 0 0 0;
+    border-top: 2px solid #5E548E;
+
     width: 100%;
+
+    padding: 20px 0 0 0;
     margin: 15px 0;
 }
 
@@ -115,9 +148,11 @@ textarea {
 
 .tweet-details {
     display: flex;
-    font-size: 13px;
     justify-content: space-between;
+
     width: 160px;
+
+    font-size: 13px;
 }
 
 .tweet-detail {
@@ -126,34 +161,145 @@ textarea {
 }
 
 .tweet-reply {
-    border-top: 1px solid lightgray;
+    border-top: 1px solid #5E548E;
+
+    width: 80%;
+
     padding: 20px 0 0 0px;
     margin: 10px 0 10px 40px;
+}
+
+.reply-form {
     width: 80%;
+
+    margin: 10px 0 10px 40px;
 }
 
 .handle {
+    color: #231942;
     font-size: 12px;
+
     font-weight: 500;
-    color: #555;
+
     margin-top: 0;
 }
 
 .tweet-text {
-    width: 207px;
     font-size: 14px;
     line-height: 20px;
+
+    width: 207px;
 }
 
 /* images */
 
 .profile-pic {
+    width: 48px;
+
     border: 1px solid lightgray;
     border-radius: 50%;
-    width: 48px;
 }
 
 /* utility */
 .hidden {
     display: none;
+}
+
+/***MODALS***/
+.modal-login {
+    display: none;
+}
+
+.modal-logins {
+    background-color: #BE95C4;
+
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+
+    width: 420px;
+    min-height: 490px;
+
+    top: 100px;
+    left: 0;
+    right: 0;
+
+    border: 2px solid #E0B1CB;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.modal-header {
+    background-color: #E0B1CB;
+}
+
+.modal-header h3 {
+    color: #231942;
+    text-align: center;
+}
+
+.modal-close-btn {
+    font-size: 14px;
+    background-color: transparent;
+    color: #231942;
+
+    position: absolute;
+
+    top: 2%;
+    right: 2%;
+
+    padding: 2px 6px;
+    border: 2px solid #231942;
+    border-radius: 50%;
+}
+
+.modal-close-btn:hover {
+    color: white;
+    background-color: #231942;
+
+    cursor: pointer;
+}
+
+.modal-inner {
+    margin: 5%;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: #231942;
+    font-size: 20px;
+}
+
+.input {
+    background-color: #9f86c0;
+    color: #231942;
+
+    line-height: 25px;
+
+    padding: 5px 10px;
+    border: 1px solid #5e548e;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+
+.input::placeholder {
+    color: #5e548e;
+}
+
+.submit-btn {
+    margin-top: 15px;
+}
+
+.sign-up-modal-btn {
+    position: absolute;
+
+    bottom: 15px;
+
+    width: 30%;
+
+    margin: auto 30%;
 }
